@@ -1,0 +1,18 @@
+{% extends 'flatpages/default.html' %}
+
+{% block title %}
+News
+{% endblock %}
+
+{% block content %}
+    {% if category.id %}
+    <div>
+        <em>
+            Subscribe to
+            <strong>{{ category }}</strong>
+        </em>
+
+        <a href="{% url 'news:subscribe' category.id %}">Subscribe</a>
+    </div>
+    {% endif %}
+{% endblock %}
